@@ -36,7 +36,7 @@ jobs:
 
       - name: Run application
 
-        run: python app.py
+        run: python ap.py
  
       # Step 4: Optional: Echo success message
 
