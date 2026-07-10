@@ -44,4 +44,8 @@ jobs:
 
         run: echo "CI Pipeline executed successfully!"
 
+      # Step 5 : Echo message 
+      - name: Echo message
+
+        run: echo "Build started successfully."
  
