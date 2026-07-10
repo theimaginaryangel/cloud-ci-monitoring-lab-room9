@@ -1,0 +1,47 @@
+name: CI Pipeline
+ 
+# Trigger pipeline on every push to the repository
+
+on:
+
+  push:
+ 
+jobs:
+
+  build:
+
+    # Use a fresh Ubuntu runner for the job
+
+    runs-on: ubuntu-latest
+ 
+    steps:
+
+      # Step 1: Checkout the repository
+
+      - name: Checkout repository
+
+        uses: actions/checkout@v4
+ 
+      # Step 2: Set up Python environment
+
+      - name: Set up Python
+
+        uses: actions/setup-python@v5
+
+        with:
+
+          python-version: '3.x'
+ 
+      # Step 3: Run the application
+
+      - name: Run application
+
+        run: python app.py
+ 
+      # Step 4: Optional: Echo success message
+
+      - name: Build Success
+
+        run: echo "CI Pipeline executed successfully!"
+
+ 
